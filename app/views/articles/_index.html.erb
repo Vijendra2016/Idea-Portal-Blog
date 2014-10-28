@@ -1,0 +1,18 @@
+<table id="show_articles">
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+    </tr>
+   
+    <% @articles.each do |article| %>
+      <tr id =<%= article.id %>>
+        <td><%= article.title %></td>
+        <td><%= article.text %></td>
+        
+        <td><%= link_to_function 'show',"show('#{article.id}')" %></td>
+        <td><%= link_to_function 'edit',"edit('#{article.id}')" %></td>
+        <td><%= link_to_function 'delete',"destroy('#{article.id}')" %><td>
+     
+      </tr>
+    <% end %>
+  </table>

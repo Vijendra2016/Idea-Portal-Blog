@@ -1,0 +1,30 @@
+<h1>Articles</h1>
+  <%= link_to_function 'New article','newArticle()' %>
+  <%= link_to_function 'Show All Articles','showArticle()' %>
+</h1>
+<div id="new" class='hidden'>
+   <%= render 'article' %>
+</div>
+<div id="index" class='hidden'> 
+   <%= render 'index' %>
+</div>
+<div id="show" class='hidden'>
+
+</div>  
+<div id ="showcomments" class="hidden">    
+  <h2>Comments</h2>  
+  <table id="show_comments">
+    
+  </table>
+</div>   
+<div id ="addcomments" class="hidden">  
+  <h2>Add Comments</h2>  
+  <%= render 'comments/comment' %>
+</div>   
+
+<script src="https://code.jquery.com/jquery-1.11.0.js"></script>
+<!-- <script src="/assets/javascripts/custom.js"></script> -->
+
+<script src="/assets/custom.js" type="text/javascript"></script>
+
+

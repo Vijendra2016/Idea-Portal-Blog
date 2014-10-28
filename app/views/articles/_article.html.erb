@@ -1,0 +1,19 @@
+<%= form_for :article,:html => { :id => 'article' }, url: articles_path do |f| %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :text %><br>
+    <%= f.text_area :text %>
+
+  </p>
+   
+  <p>
+     <input type="button" name="btn-save" value="submit" id="btn-save"> 
+     <input type="text" name="id" value="" id="article_id" class= "hidden"> 
+     <input type="button" name="btn-update" value="update" id="btn-update" class="hidden"> 
+  </p>
+<% end %>
